@@ -34,8 +34,11 @@ def main():
         if not line:
             continue
         path = line[3:].strip()
-        if path.startswith('"') and path.endswith('"'):
-            path = path[1:-1]
+        # Clean up surrounding quotes and trailing slashes
+        path = path.strip('"').rstrip('/')
+        # Skip submodules/nested git repositories
+        if os.path.isdir(path) and os.path.exists(os.path.join(path, ".git")):
+            continue
         files.append(path)
 
     total_files = len(files)
