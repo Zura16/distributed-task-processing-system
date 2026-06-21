@@ -1,0 +1,30 @@
+# Task Checklist: Distributed Task Processing System
+
+- `[x]` Git Initialization and GitHub Repository Creation
+  - `[x]` Run `git init` in workspace
+  - `[x]` Create `.gitignore` for Python, React/Node, and environment files
+  - `[x]` Create public repository `Zura16/distributed-task-processing-system` on GitHub
+  - `[x]` Set up origin remote pointing to the new repository
+- `[x]` Backend Base Configuration & Queue Client
+  - `[x]` Create `backend/requirements.txt`
+  - `[x]` Create `backend/core/config.py` (Redis connection settings)
+  - `[x]` Create `backend/core/queue.py` (Custom Redis Task Queue with State updates, Logging, & Metrics support)
+  - `[x]` Create `backend/core/tasks.py` (Task definitions & registry decorator)
+- `[x]` Worker Daemon
+  - `[x]` Create `backend/worker.py` (Subscribes to queue, runs tasks concurrently, captures logs to Redis, handles retries/backoff)
+- `[x]` Scheduler Daemon
+  - `[x]` Create `backend/scheduler.py` (Polls delayed ZSET, enqueues tasks using Redis transactions)
+- `[x]` FastAPI API Server
+  - `[x]` Create `backend/main.py` (Endpoints for submit, status, logs, cancel, metrics, and workers)
+- `[x]` Dashboard Frontend (React)
+  - `[x]` Initialize Vite React project in `frontend/`
+  - `[x]` Create `frontend/src/index.css` with a premium dark-mode aesthetic
+  - `[x]` Create dashboard UI in `frontend/src/App.jsx` and components (Metrics, TaskTable, TaskForm, LogViewer)
+- `[x]` Docker Infrastructure
+  - `[x]` Create `backend/Dockerfile`
+  - `[x]` Create `frontend/Dockerfile`
+  - `[x]` Create `docker-compose.yml` orchestrating Redis, Backend, Scheduler, multiple Workers, and Frontend
+- `[x]` Verification and Walkthrough
+  - `[x]` Run manual testing using the UI
+  - `[x]` Write `walkthrough.md` with screenshots and implementation logs
+  - `[x]` Commit and push all code changes to GitHub (Progressive push complete: 100% of files pushed)
