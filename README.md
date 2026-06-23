@@ -22,29 +22,29 @@ Instead of wrapping standard task queues, this project implements a custom Redis
 
 ```
 .
-├── docker-compose.yml       # Orchestrates Redis, Backend, Workers, and Dashboard
-├── backend/
-│   ├── Dockerfile
-│   ├── requirements.txt
-│   ├── main.py              # FastAPI Web API
-│   ├── worker.py            # Worker daemon with thread pool executor
-│   ├── scheduler.py         # Scheduler daemon for delayed tasks
-│   ├── core/
-│   │   ├── config.py        # Redis & system settings
-│   │   ├── queue.py         # Custom TaskQueue client wrapper
-│   │   └── tasks.py         # Task registry & task definitions
-│   └── tests/
-│       ├── test_queue.py    # Queue lifecycle & scheduling unit tests
-│       └── test_worker.py   # Worker execution & retry flow unit tests
-└── frontend/
-    ├── Dockerfile
-    ├── package.json
-    ├── index.html
-    └── src/
-        ├── main.jsx
-        ├── App.jsx          # Dashboard application
-        ├── index.css        # Premium custom CSS styling
-        └── App.css          # Blank styling override
++-- docker-compose.yml       # Orchestrates Redis, Backend, Workers, and Dashboard
++-- backend/
+|   +-- Dockerfile
+|   +-- requirements.txt
+|   +-- main.py              # FastAPI Web API
+|   +-- worker.py            # Worker daemon with thread pool executor
+|   +-- scheduler.py         # Scheduler daemon for delayed tasks
+|   +-- core/
+|   |   +-- config.py        # Redis & system settings
+|   |   +-- queue.py         # Custom TaskQueue client wrapper
+|   |   +-- tasks.py         # Task registry & task definitions
+|   +-- tests/
+|       +-- test_queue.py    # Queue lifecycle & scheduling unit tests
+|       +-- test_worker.py   # Worker execution & retry flow unit tests
++-- frontend/
+    +-- Dockerfile
+    +-- package.json
+    +-- index.html
+    +-- src/
+        +-- main.jsx
+        +-- App.jsx          # Dashboard application
+        +-- index.css        # Premium custom CSS styling
+        +-- App.css          # Blank styling override
 ```
 
 ---
