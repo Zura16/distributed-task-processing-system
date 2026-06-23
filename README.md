@@ -1,6 +1,6 @@
-# Antigravity Flow: Distributed Task Processing System
+# Distributed Task Processing System
 
-Antigravity Flow is a lightweight, custom-built distributed task scheduling and execution system (similar to a mini-Airflow + Celery) written in Python and React. 
+This is a lightweight, custom-built distributed task scheduling and execution system (similar to a mini-Airflow + Celery) written in Python and React. 
 
 Instead of wrapping standard task queues, this project implements a custom Redis-backed messaging queue, concurrency-capable workers, scheduled task state machines, and a dynamic telemetry dashboard from scratch to demonstrate low-level systems engineering.
 
